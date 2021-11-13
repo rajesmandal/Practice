@@ -9,27 +9,260 @@ public class PepCoding {
     public static void main(String[] args) {
 
 
-//        PepCoding.subArray();
-//        PepCoding.rotateArray();
-//        PepCoding.prime();
-//        PepCoding.printAllPrime();
-//        PepCoding.fibonacci();
-//        PepCoding.countDigit();
-//        PepCoding.digitsOfANumber();
-//        PepCoding.reverseANumber();
-//        PepCoding.pattern6();
-//            PepCoding.pattern7();
-//        PepCoding.pattern8();
-//        PepCoding.pattern9();
-//        PepCoding.pattern10();
-//        PepCoding.pattern11();
-//        PepCoding.pattern12();
-//        PepCoding.pattern14();
-//        PepCoding.pattern15();
-//        PepCoding.pattern16();
+//        subArray();
+//        rotateArray();
+//        prime();
+//        printAllPrime();
+//        fibonacci();
+//        countDigit();
+//        digitsOfANumber();
+//        reverseANumber();
+//        pattern6();
+//        pattern7();
+//        pattern8();
+//        pattern9();
+//        pattern10();
+//        pattern11();
+//        pattern12();
+//        pattern14();
+//        pattern15();
+//        pattern16();
+//        pattern17();
+//        pattern18();
+//        pattern19();
+//        pattern20();
+//        patternM();
+//        patternInvertedHourGlass();
+
+
     }
+    public static void patternInvertedHourGlass()
+    {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int half = n/2+1;
+        int right = n;
+        int left = 1;
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = 1; j <= n; j++)
+            {
+                if (i == 1 || i == n)
+                    System.out.print("*\t");
+                else if (i == left) {
+                    if (j >= left && j <= right)
+                        System.out.print("*\t");
+                    else
+                        System.out.print("\t");
+                }
+                else if (i >= n/2+1){
+                    if (j == left || j == right)
+                        System.out.print("*\t");
+                    else
+                        System.out.print("\t");
+                }
+
+
+            }
+            System.out.println();
+            if (i < half) {
+                right--;
+                left++;
+            }
+            else
+            {
+                right++;
+                left--;
+            }
+        }
+    }
+    public static void patternM()
+    {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int left = 1;
+        int right = n;
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = 1; j <= n; j++)
+            {
+                if (i > n / 2 + 1) {
+                    if (j == 1 || j == n) {
+                        System.out.print("*\t");
+                    } else
+                        System.out.print("\t");
+                }
+                else if (i <= n / 2 + 1)
+                {
+                    if (j == 1 || j == n) {
+                        System.out.print("*\t");
+                    }
+                    else if (j == left && j == right) {
+                        System.out.print("*\t");
+                    }
+                    else if (j == left || j == right)
+                    {
+                        System.out.print("*\t");
+                    }
+                    else
+                        System.out.print("\t");
+
+                }
+
+            }
+            System.out.println();
+            if (i <= n / 2 + 1) {
+                right--;
+                left++;
+            }
+        }
+
+    }
+
+    public static void pattern20()
+    {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int left = n / 2 + 1;
+        int right = n / 2 + 1;
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = 1; j <= n; j++)
+            {
+                if (i < n / 2 + 1) {
+                    if (j == 1 || j == n) {
+                        System.out.print("*\t");
+                    } else
+                        System.out.print("\t");
+                }
+                else if (i >= n / 2 + 1)
+                {
+                    if (j == 1 || j == n) {
+                        System.out.print("*\t");
+                    }
+                    else if (j == left && j == right) {
+                        System.out.print("*\t");
+                    }
+                    else if (j == left || j == right)
+                    {
+                        System.out.print("*\t");
+                    }
+                    else
+                        System.out.print("\t");
+
+                }
+
+            }
+            System.out.println();
+            if (i >= n / 2 + 1) {
+                right++;
+                left--;
+            }
+        }
+
+    }
+    public  static void pattern19()
+    {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = 1; j <= n; j++)
+            {
+                if (i == n/2+1)
+                    System.out.print("*\t");
+                else if (i == 1) {
+                    if (j <= n / 2 + 1 || j == n)
+                        System.out.print("*\t");
+                    else
+                        System.out.print("\t");
+                }
+                else if (i == n){
+                    if (j >= n / 2 + 1 || j == 1)
+                        System.out.print("*\t");
+                    else
+                        System.out.print("\t");
+                }
+                else if (i < n/2+1){
+                    if (j == n || j == n/2+1)
+                        System.out.print("*\t");
+                    else
+                        System.out.print("\t");
+                }
+                else if (i > n/2+1){
+                    if (j == 1 || j == n/2+1)
+                        System.out.print("*\t");
+                    else
+                        System.out.print("\t");
+                }
+
+            }
+            System.out.println();
+        }
+    }
+    public static void pattern18()
+    {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int half = n/2+1;
+        int right = n;
+        int left = 1;
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = 1; j <= n; j++)
+            {
+                if (i == 1 || i == n)
+                    System.out.print("*\t");
+                else if (i == left) {
+                    if (j == left || j == right)
+                        System.out.print("*\t");
+                    else
+                        System.out.print("\t");
+                }
+                else if (i > n/2+1){
+                    if (j >= left && j <= right)
+                        System.out.print("*\t");
+                    else
+                        System.out.print("\t");
+                }
+
+            }
+            System.out.println();
+            if (i >= half) {
+                right++;
+                left--;
+            }
+            else
+            {
+                right--;
+                left++;
+            }
+        }
+    }
+
+
     public static void pattern17(){
         Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int half = (n/2)+1;
+        int st = half;
+        for(int i = 1; i <= n; i++)
+        {
+            for (int j = 1 ; j <= n; j++)
+            {
+                if(i == half)
+                    System.out.print("*\t");
+                else if(j >= half && j <= st)
+                    System.out.print("*\t");
+                else
+                    System.out.print("\t");
+            }
+            System.out.println();
+            if(i >= half)
+                st--;
+            else
+                st++;
+        }
     }
 
     public static void pattern16(){
